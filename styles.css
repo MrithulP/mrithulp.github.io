@@ -1,0 +1,443 @@
+
+/* Robot Font */
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+:root {
+  --primary-color: #66fcf1;
+  --accent-color: #45a29e;
+  --text-color: #ffffff;
+  --text-color-light: #ffffff;
+  --bg-color:   #0b0c10;
+  --bg-color-light: #1f2833;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+}
+.container {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.7s ease-in-out;
+}
+.sidebar {
+  min-width: 250px;
+  border-radius: 30px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color-light);
+  transition: all 0.7s ease-in-out;
+ 
+}
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color);
+}
+.user-avatar p {
+  color: #1f2833;
+  font-size: 20px;
+  transition: all 0.7s ease-in-out;
+}
+.user-avatar img {
+  width: 120%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.7s ease-in-out;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+.user-info h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.user-info p {
+  font-size: 14px;
+  color: #aaa;
+}
+.hr {
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--text-color);
+  margin: 20px 0;
+  opacity: 0.2;
+}
+.sidebar .menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.7s ease-in-out;
+}
+
+.sidebar .menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.5s ease-in-out;
+}
+.sidebar .menu li a ion-icon {
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.sidebar .menu li.active a,
+.sidebar .menu li:hover a {
+  color: var(--primary-color);
+}
+
+.sidebar .menu li.active a ion-icon,
+.sidebar .menu li:hover a ion-icon {
+  color: #1f2833;
+  background-color: var(--primary-color);
+}
+.sidebar .menu.one {
+  flex: 1;
+}
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar.shrink {
+  width: 60px; /* Adjust width to fit just icons */
+}
+
+.navbar.shrink .nav-item span {
+  display: none;
+}
+
+
+.sidebar {
+  min-width: 250px;
+  transition: all 0.7s ease-in-out; /* Smooth transition for width */
+  border-radius: 30px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color-light);
+}
+
+.sidebar.shrink {
+  min-width: 80px; /* Shrinked sidebar width */
+  padding: 20px 10px;
+  
+}
+
+.sidebar.shrink .user-info,
+.sidebar.shrink .menu li a span {
+  display: none; /* Hide user info and text labels */
+}
+
+.sidebar.shrink .menu li a {
+  justify-content: center;
+}
+
+.sidebar.shrink .menu li a ion-icon {
+  margin-right: 0; /* Center icons */
+}
+
+/* For the toggle button to also move along */
+#toggle-btn {
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  
+  transition: all 0.9s ease-in-out; 
+}
+
+
+.user {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#toggle-btn {
+  margin: 10px 0;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.sidebar.shrink {
+  min-width: 80px; /* Shrink sidebar width */
+  padding: 20px 10px;
+}
+
+.sidebar.shrink .user {
+  flex-direction: column; /* Stack avatar and button */
+  margin-left: 15px ;
+}
+
+.sidebar.shrink #toggle-btn {
+  order: 1; /* Move the toggle button below the avatar */
+  margin-left: -12.5px;
+  rotate: 180deg;
+  transition: all 0.9s ease-in-out; 
+  margin-bottom: 0;
+}
+
+.sidebar.shrink .user-info {
+  display: none; /* Hide user info */
+}
+
+.sidebar.shrink .menu li a span {
+  display: none; /* Hide text in the menu */
+}
+
+.sidebar.shrink .menu li a {
+  justify-content: center;
+}
+
+.sidebar.shrink .menu li a ion-icon {
+  margin-right: 0; /* Center icons */
+}
+
+/* Slide container */
+.slides {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Each slide */
+.slide {
+  display: none; /* Hide all slides by default */
+}
+
+/* Active slide */
+.slide.active {
+  display: block; /* Only display the active slide */
+}
+
+.sidebar .menu li.active a,
+.sidebar .menu li:hover a {
+  color: var(--primary-color);
+}
+
+.sidebar .menu li.active a ion-icon,
+.sidebar .menu li:hover a ion-icon {
+  color: #1f2833;
+  background-color: var(--primary-color);
+}
+
+
+.slide-container {
+  background-color: var(--bg-color-light);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 40px); /* 100% width minus 20px gap on both sides */
+  margin: 0 auto;
+  color: var(--text-color);
+  text-align: center;
+  height: 90vh;
+}
+
+/* Headings */
+.slide-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* Paragraphs */
+.slide-container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Dashboard content boxes */
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Content boxes for both dashboard and about me */
+.box {
+  background-color: var(--bg-color);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: left;
+  flex: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+/* Box headings */
+.box h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* About content */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Lists in About Me */
+.about-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-content ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px) {
+  body {
+    overflow: hidden; /* Disable scroll */
+  }
+  
+  .slide-container {
+    max-width: 95vw; /* Max width is 95% of the viewport */
+  }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+      overflow: auto; /* Enable scroll */
+    }
+    
+    .slide-container {
+      width: 80vw; /* Keep a 20px gap on each side */
+      padding: 10px; /* Smaller padding on mobile */
+      height: auto;
+    }
+
+    .dashboard-content, .about-content {
+      flex-direction: column; /* Stack content vertically on mobile */
+    }
+
+    .box {
+      margin-bottom: 20px;
+    }
+  .sidebar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    height: 20px;
+  }
+  .sidebar .user {
+    display: none;
+  }
+  .sidebar .hr {
+    display: none;
+  }
+  .sidebar .menu.one:last-child {
+    display: none;
+  }
+  .sidebar .menu.two {
+    display: none;
+  }
+  .sidebar .menu {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .sidebar .menu li a span {
+    display: none;
+  }
+  .sidebar .menu li a ion-icon {
+    font-size: 20px;
+  }
+  .dashboard-content, .about-content {
+    flex-direction: column;
+  }
+
+  .box {
+    margin-bottom: 20px;
+  }
+  
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mrithul P Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar" id="sidebar">
+        <div class="user">
+          <div class="user-avatar">
+            <p>MP</p>
+          </div>
+          <div class="user-info">
+            <h3>Mrithul P Vijeesh</h3>
+            <p>Student</p>
+          </div>
+          <button id="toggle-btn" onclick="toggleNavbar()"><ion-icon name="caret-back-outline"></ion-icon></button> <!-- Moved button out of user section -->
+        </div>
+        
+        <div class="hr"></div>
+        <ul class="menu one">
+          <li id="dashboard-btn">
+            <a href="#" onclick="showSlide('dashboard')">
+              <ion-icon name="home-outline"></ion-icon>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li id="about-btn">
+            <a href="#" onclick="showSlide('about')">
+              <ion-icon name="person-outline"></ion-icon>
+              <span>About Me</span>
+            </a>
+          </li>
+          <li id="portfolio-btn">
+            <a href="#" onclick="showSlide('portfolio')">
+              <ion-icon name="folder-open-outline"></ion-icon>
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li id="messages-btn">
+            <a href="#" onclick="showSlide('messages')">
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>Messages</span>
+            </a>
+          </li>
+          <li id="settings-btn">
+            <a href="#" onclick="showSlide('settings')">
+              <ion-icon name="school-outline"></ion-icon>
+              <span>Education</span>
+            </a>
+          </li>
+        </ul>
+        <div class="hr"></div>
+        <ul class="menu two">
+          <li>
+            <a href="#" onclick="showSlide('contact')">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <span>Contact Me</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="showSlide('resume')">
+              <ion-icon name="download-outline"></ion-icon>
+              <span>Download Resume</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+
+
+
+
+
+      <main class="slides">
+        <section id="dashboard-slide" class="slide active">
+          <div class="slide-container">
+            <h1>Dashboard</h1>
+            <p>Welcome to the dashboard! Here, you can find a summary of your profile, activities, and updates.</p>
+            <div class="dashboard-content">
+              <div class="box">
+                <h3>Profile</h3>
+                <p>View and edit your personal information.</p>
+              </div>
+              <div class="box">
+                <h3>Recent Activities</h3>
+                <p>Check out your recent interactions and actions.</p>
+              </div>
+              <div class="box">
+                <h3>Notifications</h3>
+                <p>Stay updated with the latest news and alerts.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section id="about-slide" class="slide">
+          <div class="slide-container">
+            <h1>About Me</h1>
+            <p>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah. </p>
+            <div class="about-content">
+              <div class="box">
+                <h3>Skills</h3>
+                <ul>
+                  <li>HTML & CSS</li>
+                  <li>JavaScript</li>
+                  <li>Photography</li>
+                </ul>
+              </div>
+              <div class="box">
+                <h3>Hobbies</h3>
+                <p>In my free time, I enjoy outdoor activities like hiking, and I'm also a keen photographer.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="portfolio-slide" class="slide">
+          <h1>Portfolio</h1>
+        </section>
+
+
+        <section id="messages-slide" class="slide">
+          <h1>Messages</h1>
+        </section>
+
+
+        <section id="settings-slide" class="slide">
+          <h1>Settings</h1>
+        </section>
+
+
+        <section id="contact-slide" class="slide">
+          <h1>Contact Me</h1>
+        </section>
+
+
+        <section id="resume-slide" class="slide">
+          <h1>Download Resume</h1>
+        </section>
+
+
+      </main>
+
+
+
+
+
+    </div>
+    </div>
+
+    <!-- IONICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
