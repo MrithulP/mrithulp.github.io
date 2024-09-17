@@ -3,7 +3,6 @@ function toggleNavbar() {
   const sidebar = document.getElementById('sidebar');
   sidebar.classList.toggle('shrink');
 }
-
 // Show the appropriate slide
 function showSlide(slideId) {
   // Hide all slides
