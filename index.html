@@ -36,8 +36,8 @@
               <span>About Me</span>
             </a>
           </li>
-          <li id="settings-btn">
-            <a href="#" onclick="showSlide('settings')">
+          <li id="education-btn">
+            <a href="#" onclick="showSlide('education')">
               <ion-icon name="school-outline"></ion-icon>
               <span>Education</span>
             </a>
@@ -58,13 +58,13 @@
         </ul>
         <div class="hr"></div>
         <ul class="menu two">
-          <li>
+          <li id="contact-btn">
             <a href="#" onclick="showSlide('contact')">
               <ion-icon name="phone-portrait-outline"></ion-icon>
               <span>Contact Me</span>
             </a>
           </li>
-          <li>
+          <li id="resume-btn">
             <a href="#" onclick="showSlide('resume')">
               <ion-icon name="download-outline"></ion-icon>
               <span>Download Resume</span>
@@ -82,40 +82,91 @@
         <section id="dashboard-slide" class="slide active">
           <div class="slide-container">
             <h1>Dashboard</h1>
-            <p>Welcome to the dashboard! Here, you can find a summary of your profile, activities, and updates.</p>
+            <p>Welcome to the dashboard! Here, you'll find a comprehensive overview of the key topics and content <br>featured on this website, 
+              providing a clear summary of everything covered.</p>
             <div class="dashboard-content">
               <div class="box">
-                <h3>Profile</h3>
-                <p>View and edit your personal information.</p>
+                <h3>About Me    <ion-icon name="person-outline"></ion-icon></h3>
+                <p>
+                  Discover more about who I am, including my passions, strengths, and what drives me. This section provides insight into my 
+                  hobbies, skills, and personal growth journey, offering a deeper understanding of my capabilities and the unique perspective I 
+                  bring to everything I do.</p>
               </div>
               <div class="box">
-                <h3>Recent Activities</h3>
-                <p>Check out your recent interactions and actions.</p>
+                <h3>Education    <ion-icon name="school-outline"></ion-icon></h3>
+                <p>Learn about my educational journey, including my current studies as a senior high school student and the goals I aim to pursue 
+                  in the future. This section highlights my academic background, interests, and the direction I envision for my continued growth.</p>
               </div>
               <div class="box">
-                <h3>Notifications</h3>
-                <p>Stay updated with the latest news and alerts.</p>
+                <h3>Portfolio    <ion-icon name="folder-open-outline"></ion-icon></h3>
+                <p>Explore my latest projects and websites I've developed to gain insight into my skills and expertise. By reviewing my work, you'll 
+                  get a clear sense of my capabilities and the range of experiences I bring to web development and other creative projects.</p>
+              </div>
+            </div>
+            <div class="dashboard-content" style="margin-top: 20px;">
+              <div class="box">
+                <h3>Testimonials    <ion-icon name="chatbubble-ellipses-outline"></ion-icon></h3>
+                <p>
+                  Here, you can explore testimonials from my teachers, colleagues, and collaborators, offering insights into my abilities and teamwork skills. 
+                  Their feedback reflects the impact of my contributions and my effectiveness in collaborative environments.</p>
+              </div>
+              <div class="box">
+                <h3>Contact    <ion-icon name="phone-portrait-outline"></ion-icon></h3>
+                <p>
+                  Feel free to use the contact form to reach out if you have any questions or need further clarification on anything that hasn't been 
+                  covered yet. I'm happy to provide additional details or discuss any inquiries you may have.</p>
+              </div>
+              <div class="box">
+                <h3>Resume    <ion-icon name="folder-open-outline"></ion-icon></h3>
+                <p>Here you can view my resume to learn more about my achievements and background. Feel free to download it for a closer look at my 
+                  experiences and qualifications.</p>
               </div>
             </div>
           </div>
         </section>
         
         <section id="about-slide" class="slide">
-          <div class="slide-container">
+          <div class="slide-container" >
             <h1>About Me</h1>
-            <p> My name is Mrithul,I am a senior at high school and an aspiring full stack programmer. I'm boring depressed and lonely, well I guess that's a const for all programmers. </p>
+            <p> As a high school senior, I’m on a mission to master the art of fullstack development. From crafting elegant front-end interfaces to 
+              diving<br> into databases, I’m fueled by curiosity and code. And ofcourse like any other introverted developer i ChatGPT'ed this</p>
             <div class="about-content">
               <div class="box">
                 <h3>Skills</h3>
-                <ul>
-                  <li>HTML & CSS</li>
-                  <li>JavaScript</li>
-                  <li>Photography</li>
-                </ul>
+                <div class="skills_main">
+                  <div class="skill_bar">
+                      <div class="info">
+                          <p>HTML & CSS</p>
+                          <P>50%</P>
+                      </div>
+                      <div class="bar">
+                          <span class="html"></span>
+                      </div>
+                  </div>
+                  <div class="skill_bar">
+                      <div class="info">
+                          <p>JavaScript</p>
+                          <P>25%</P>
+                      </div>
+                      <div class="bar">
+                          <span class="js"></span>
+                      </div>
+                  </div>
+                  <div class="skill_bar">
+                      <div class="info">
+                          <p>Python</p>
+                          <P>65%</P>
+                      </div>
+                      <div class="bar">
+                          <span class="python"></span>
+                      </div>
+                  </div>
+                </div>
               </div>
               <div class="box">
                 <h3>Hobbies</h3>
-                <p>In my free time, I enjoy outdoor activities like hiking, and I'm also a keen photographer.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
             </div>
           </div>
@@ -146,7 +197,7 @@
                   <a href="https://oanmediahub.github.io/photography" class="site">Visit Site  <ion-icon name="open-outline" style="transform: scale(1.3);"></ion-icon></a>
                 </div>
               </div>
-              <div class="portfolio-content" style="margin-top: -20px;">
+              <div class="portfolio-content" style="margin-top: -70px;">
                 <div class="box">
                   <img src="images/careers committee logo.png" alt="" class="portfolioimgs">
                   <h3>Careers committee</h3>
@@ -162,11 +213,44 @@
 
 
         <section id="messages-slide" class="slide">
-          <h1>Messages</h1>
+          <div class="slide-container">
+            <h1>Testimonials</h1>
+            <p>Testimonials from my teachers, teammates, and colleagues showcase my strong work ethic, collaborative nature, and consistent 
+              performance across different tasks and projects. Their feedback highlights my ability to adapt, lead, and contribute meaningfully
+               in both academic and professional environments. </p>
+                <div class="message-content" style="margin-top: -5px;">
+                  <div class="box">
+                    
+                    <h3>Teacher's Name and Description</h3>
+                    <p>&#x275D Teacher's testimonial. &#x275E </p>
+                  </div>
+                  <div class="box">
+                    
+                    <h3>Teacher's Name and Description</h3>
+                    <p>&#x275D Teacher's testimonial. &#x275E </p>
+                  </div>
+                  <div class="box">
+                    
+                    <h3>Teacher's Name and Description</h3>
+                    <p>&#x275D Teacher's testimonial. &#x275E </p>
+                  </div>
+                  
+                </div>
+                <div class="message-content" style="margin-top: -70px;">
+                  <div class="box">
+                    
+                    <h3>Teacher's Name and Description</h3>
+                    <p>&#x275D Teacher's testimonial. &#x275E </p>
+                  </div>
+                  
+                </div>
+              
+            
+          </div>
         </section>
 
 
-        <section id="settings-slide" class="slide">
+        <section id="education-slide" class="slide">
           <h1>Education</h1>
         </section>
 
