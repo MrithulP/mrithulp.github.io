@@ -58,7 +58,7 @@ body {
   transition: all 0.7s ease-in-out;
 }
 .user-avatar img {
-  width: 120%;
+  width: 150%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
@@ -281,11 +281,12 @@ main {
   padding: 20px;
   border-radius: 50px 0 0 50px;
   box-shadow: 4px 4px 8px #66fcf1;
-  width: calc(100% - 40px); /* 100% width minus 20px gap on both sides */
+  width: calc(100% - 40px);
   margin: 0 auto;
   color: var(--text-color);
   text-align: center;
   height: 90vh;
+  width: 76vw;
 }
 
 /* Headings */
@@ -309,9 +310,12 @@ main {
   gap: 20px;
 }
 
+.dashboard-content .box p{
+  font-size: 13px;
+}
 /* Content boxes for both dashboard and about me */
 .box {
-  background-color: var(--bg-color);
+  background-color: #151b23;
   border-radius: 15px;
   padding: 15px;
   text-align: left;
@@ -344,9 +348,10 @@ main {
   padding-left: 0;
 }
 
-.about-content ul li {
+.about-content ul li h3 {
   font-size: 1rem;
   line-height: 1.6;
+  color: #fff;
 }
 
 .portfolio-content {
@@ -416,6 +421,149 @@ main {
  
 }
 
+.message-content .box{
+  background-color: #151b23;
+  width: 70vw;
+}
+.message-content{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1020px);
+  margin: 90px;
+}
+.message-content .box{
+  margin-bottom: 20px;
+}
+#messages-slide .slide-container {
+  height: 90vh; /* Adjust this to your desired height */
+  overflow-y: scroll; /* Prevent horizontal scrolling */
+  padding-right: 10px; /* Adjust to avoid scrollbars overlaying content */
+  scrollbar-width: 1px; /* For Firefox */
+  scrollbar-color: transparent;
+}
+#messages-slide .slide-container::-webkit-scrollbar {
+  width: 5px; 
+}
+#messages-slide .slide-container::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+#messages-slide .slide-container::-webkit-scrollbar-thumb {
+  background-color: #162230;
+  border-radius: 10px; 
+  border: 0.5px solid #45a29e;
+ 
+}
+
+
+
+
+.skills_main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
+}
+.skills_main .skill_bar .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 10px;
+}
+.skill_bar .info p:nth-child(2){
+  font-weight: 500;
+}
+.skill_bar .bar{
+  width: 100%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.144);
+  border-radius: 25px;
+  margin-top: 5px;
+  position: relative;
+}
+.skill_bar .bar span{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: #66fcf1;
+  border-radius: 25px;
+}
+
+
+.skill_bar .bar .html{
+  width: 50%;
+  animation: html 2s;
+}
+@keyframes html {
+  0%{
+      width: 0%;
+  }100%{
+      width: 50%;
+  }
+}
+
+
+.skill_bar .bar .js{
+  width: 25%;
+  animation: js 2s;
+}
+@keyframes js {
+  0%{
+      width: 0%;
+  }100%{
+      width: 25%;
+  }
+}
+
+
+.skill_bar .bar .python{
+  width: 65%;
+  animation: python 2s;
+}
+@keyframes python {
+  0%{
+      width: 0%;
+  }100%{
+      width: 65%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -461,6 +609,7 @@ main {
     align-items: center;
     width: 95%;
     height: 20px;
+    z-index: 20;
   }
   .sidebar .user {
     display: none;
@@ -498,6 +647,10 @@ main {
   }
   .portfolioimgs{
     margin-left: 7.5%;
+  }
+  .message-content{
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit,270px);
   }
 
 }
