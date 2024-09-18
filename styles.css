@@ -497,40 +497,40 @@ main {
 
 
 .skill_bar .bar .html{
-  width: 50%;
+  width: 40%;
   animation: html 2s;
 }
 @keyframes html {
   0%{
       width: 0%;
   }100%{
-      width: 50%;
+      width: 40%;
   }
 }
 
 
 .skill_bar .bar .js{
-  width: 25%;
+  width: 15%;
   animation: js 2s;
 }
 @keyframes js {
   0%{
       width: 0%;
   }100%{
-      width: 25%;
+      width: 15%;
   }
 }
 
 
 .skill_bar .bar .python{
-  width: 65%;
+  width: 55%;
   animation: python 2s;
 }
 @keyframes python {
   0%{
       width: 0%;
   }100%{
-      width: 65%;
+      width: 55%;
   }
 }
 
@@ -651,6 +651,11 @@ main {
   .message-content{
     flex-direction: column;
     grid-template-columns: repeat(auto-fit,270px);
+  }
+  .skills_main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 
 }
