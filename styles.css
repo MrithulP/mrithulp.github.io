@@ -122,6 +122,9 @@ body {
 .sidebar .menu.one {
   flex: 1;
 }
+.menumbl{
+  display: none;
+}
 main {
   width: 100%;
   display: flex;
@@ -440,10 +443,10 @@ main {
   margin-bottom: 20px;
 }
 #messages-slide .slide-container {
-  height: 90vh; /* Adjust this to your desired height */
-  overflow-y: scroll; /* Prevent horizontal scrolling */
-  padding-right: 10px; /* Adjust to avoid scrollbars overlaying content */
-  scrollbar-width: 1px; /* For Firefox */
+  height: 90vh;
+  overflow-y: scroll; 
+  padding-right: 10px; 
+  scrollbar-width: 1px; 
   scrollbar-color: transparent;
 }
 #messages-slide .slide-container::-webkit-scrollbar {
@@ -459,6 +462,8 @@ main {
   border: 0.5px solid #45a29e;
  
 }
+
+
 
 
 
@@ -497,14 +502,14 @@ main {
 
 
 .skill_bar .bar .html{
-  width: 40%;
+  width: 55%;
   animation: html 2s;
 }
 @keyframes html {
   0%{
       width: 0%;
   }100%{
-      width: 40%;
+      width: 55%;
   }
 }
 
@@ -523,38 +528,16 @@ main {
 
 
 .skill_bar .bar .python{
-  width: 55%;
+  width: 45%;
   animation: python 2s;
 }
 @keyframes python {
   0%{
       width: 0%;
   }100%{
-      width: 55%;
+      width: 45%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -602,12 +585,12 @@ main {
   .sidebar {
     position: fixed;
     bottom: 20px;
-    left: 50%;
+    left: 85%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 95%;
+    width: 2px;
     height: 20px;
     z-index: 20;
   }
@@ -623,11 +606,65 @@ main {
   .sidebar .menu.two {
     display: none;
   }
+  .sidebar .menu{
+    display: none;
+  }
+  .sidebar .menu.two #menu-btn{
+    display: block;
+  }
   .sidebar .menu {
-    width: 100%;
+    width: 10%;
     justify-content: space-between;
     flex-direction: row;
   }
+  .menumbl{
+    display: block;
+    
+  }
+  .menumbl{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+  }
+  .sidebar {
+    min-width: 70px;     
+    max-width: 70px;     
+    box-shadow: 0px 0px 10px #66fcf1; /* Shadow on all sides */
+  }
+  .menumbl li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  .menumbl li a ion-icon {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .menumbl li.active a,
+  .menumbl li:hover a {
+    color: #162230;
+  }
+  
+  .menumbl li.active a ion-icon,
+  .sidebar li:hover a ion-icon {
+    color: #66fcf1;
+    background-color: #1f2833 ;
+  }
+  .menumbl{
+    flex: 1;
+  }
+
+
+
   .sidebar .menu li a span {
     display: none;
   }
