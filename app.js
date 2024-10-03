@@ -36,3 +36,30 @@ checkbox.addEventListener('change', function() {
     document.body.classList.add('light-theme');
   }
 });
+
+
+
+const textArray = ["Hi, I'm Mrithul P", "A senior High Student"];
+let index = 0;
+let textPosition = 0;
+const typingTextElement = document.getElementById("typing-text");
+
+function typeText() {
+  const currentText = textArray[index];
+
+  if (textPosition < currentText.length) {
+    typingTextElement.innerHTML += currentText.charAt(textPosition);
+    textPosition++;
+    setTimeout(typeText, 100); // Adjust typing speed here (100ms)
+  } else {
+    setTimeout(() => {
+      textPosition = 0;
+      index = (index + 1) % textArray.length; // Loop through texts
+      typingTextElement.innerHTML = ""; // Clear the text
+      typeText(); // Start typing next text
+    }, 2000); // Time to wait before typing the next text (2000ms)
+  }
+}
+
+// Start typing effect when the page loads
+window.onload = typeText;
