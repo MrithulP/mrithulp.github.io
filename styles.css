@@ -137,7 +137,7 @@ input:checked + .slider .moon {
 }
 
 header {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px var(--primary);
   min-height: 15vh;
   display: flex;
   position: fixed; /* Make the navbar fixed */
@@ -149,7 +149,9 @@ header {
   color: var(--navbar-text-color);
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 99%;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 header nav {
   width: 70%;
@@ -325,6 +327,7 @@ main .img img {
 .about .container {
   width: 70%;
   margin: auto;
+  margin-top: 120px;
 }
 
 .about h1 {
@@ -397,6 +400,96 @@ main .img img {
 
 /* about section  */
 
+
+
+/* Education Section */
+.education {
+  padding: 60px 0;
+  background-color: var(--background-color-light);
+  color: var(--text-color-dark);
+}
+.education .container{
+  margin-top: 100px;
+
+}
+.education .header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.education .header h1{
+  font-size: 35px;
+}
+.education .header h3{
+  font-size: 50px;
+  color: var(--primary);
+}
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.education .container {
+  width: 70%;
+  margin: auto;
+  margin-top: 120px;
+}
+.education .container .text h1 {
+  font-size: 60px;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
+  position: relative;
+}
+
+.education .container .text h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 5px;
+  background: var(--primary);
+  border-radius: 1rem;
+}
+
+.education .container .text h3 {
+  font-size: 30px;
+  color: var(--primary);
+  font-weight: 200;
+  margin-bottom: -1rem;
+}
+
+.timeline-item {
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--primary-color-light);
+  border-radius: 10px;
+  color: #fff;
+}
+.timeline-item p{
+  font-size: 20px;
+  color: var(--text-color);
+}
+.timeline-item h3{
+  font-size: 25px;
+  color: var(--primary);
+}
+.timeline-date {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.timeline-content {
+  margin-left: 10px;
+}
+
+
+
+
+
 /* project section  */
 
 .projects {
@@ -410,6 +503,7 @@ main .img img {
 .projects .container {
   width: 70%;
   margin: auto;
+  margin-top: 120px;
 }
 
 .projects h3 {
@@ -544,11 +638,12 @@ main .img img {
 }
 
 .contact .container {
-  width: 70%;
+  width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 
 .contact h3 {
@@ -648,6 +743,132 @@ main .img img {
   transform: scale(1.05);
 }
 
+
+/* Adjustments for the Contact Section */
+.contact {
+  padding: 50px 0;
+}
+
+.contact .container .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grp {
+  margin-bottom: 15px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary-color); /* Matching theme */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/* Enquiry Form Styling */
+.enquiry-form {
+  margin-top: 60px; 
+  padding: 25px;
+  background-color: var(--form-bg-color); /* Theme background color */
+  border: 2px solid var(--primary); /* Matching border color */
+  border-radius: 12px;
+  width: 1200px; /* Larger size for desktop */
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.enquiry-form h3 {
+  color: var(--primary-color); /* Primary color */
+  margin-bottom: 20px;
+}
+
+.enquiry-form label {
+  color: var(--text-color); /* Theme text color */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--primary); /* Subtle border */
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background-color: #ffffff; /* Input background matching theme */
+  color: var(--text-color); /* Input text color */
+}
+
+.enquiry-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.7s;
+}
+
+.enquiry-form button:hover {
+  background-color: #36454F;
+  transition: 0.7s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .enquiry-form {
+    max-width: 90%; /* Smaller width for mobile */
+    padding: 15px;
+  }
+  .enquiry-form h3 {
+    color: var(--primary-color); /* Primary color */
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .enquiry-form {
+    max-width: 80%; /* Larger width for tablets and up */
+  }
+}
+
+@media (min-width: 1024px) {
+  .enquiry-form {
+    max-width: 60%; /* Full width for larger desktop screens */
+  }
+}
+
+/* Back-to-top Button, ensuring it remains unaffected */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: var(--primary-color-dark);
+}
+
+
 /* contact  */
 
 .back-top {
@@ -716,6 +937,12 @@ header nav .burger:hover i {
 }
 
 @media only screen and (max-width: 768px) {
+  header {
+    width: 97%;
+    margin-top: 5px;
+    margin-left: 5px;
+    min-height: 10vh;
+  }
   header nav .burger {
     display: block;
   }
@@ -795,21 +1022,25 @@ header nav .burger:hover i {
   .projects h1.title::after {
     width: 70%;
   }
-
+  .projects,.about{
+    margin-top: -60px;
+  }
+  .contact{
+    margin-top: -80px;
+  }
   .about h1,
   .projects .container .title,
   .contact h1 {
     font-size: 7vw;
   }
-
   .about .skills h2 {
     font-size: 8vw;
   }
-
   .about .wrapper div {
     font-size: 4rem;
   }
 
+  
   .card {
     min-width: 95%;
   }
@@ -837,6 +1068,9 @@ header nav .burger:hover i {
   .contact .footer p {
     font-size: 6vw;
   }
+  .education .container .text h1{
+    font-size: 8vw;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -851,6 +1085,13 @@ header nav .burger:hover i {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .about .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
   }
 
   .about .wrapper div {
