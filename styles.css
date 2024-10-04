@@ -327,7 +327,7 @@ main .img img {
 }
 
 .about .container {
-  width: 70%;
+  width: 80%;
   margin: auto;
   margin-top: 120px;
 }
@@ -366,11 +366,6 @@ main .img img {
   color: var(--text-color);
 }
 
-.about .skills {
-  width: 70%;
-  margin: 0 auto;
-}
-
 .about .wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -398,6 +393,99 @@ main .img img {
   text-align: center;
   color: var(--primary);
   font-size: 50px;
+}
+.about .wrapper .skill .progress-bar,
+.about .wrapper .skill .progress{
+  font-size: 5vw;
+  color: white;
+  padding: 0 10px;
+  margin-left: -10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4) inset;
+}
+.about .skills {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about .wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Two skills per row */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.skill-icon {
+  font-size: 50px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.skill-percent {
+  font-size: 16px;
+  margin-top: 5px;
+  color: var(--text-color);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--navbar-color);
+  border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 5px;
+  width: 0; /* Start from 0% */
+  animation: slideProgress 2s ease-in-out forwards; /* Sliding animation */
+}
+
+@keyframes slideProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--final-width); /* Full width animation */
+  }
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .about .wrapper {
+    grid-template-columns: 1fr; /* Stack skills on mobile view */
+  }
+}
+@media (max-width: 768px) {
+  .about .wrapper {
+    grid-template-columns: 1fr; /* Stack skills on mobile view */
+  }
 }
 
 /* about section  */
@@ -1041,7 +1129,19 @@ header nav .burger:hover i {
   .about .wrapper div {
     font-size: 4rem;
   }
-
+  .about .wrapper .skill .progress-bar,
+  .about .wrapper .skill .progress{
+  font-size: 5vw;
+  color: white;
+  padding: 0 10px;
+  margin-left: -10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 30vw;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4) inset;
+}
   
   .card {
     min-width: 95%;
@@ -1082,7 +1182,10 @@ header nav .burger:hover i {
   h3 {
     font-size: 20px !important;
   }
-
+  .about .skills {
+    width: 80%;
+    margin: 0 auto;
+  }
   .about .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -1090,14 +1193,14 @@ header nav .burger:hover i {
   }
   .about .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     gap: 3rem;
     margin-top: 2rem;
   }
 
   .about .wrapper div {
-    width: 80px;
+    width: 40vw;
   }
 
   .about p {
