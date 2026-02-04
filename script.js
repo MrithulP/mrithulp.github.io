@@ -31,6 +31,7 @@ toggle.addEventListener("click", () => {
     localStorage.setItem("theme", "dark");
   }
 });
+
 lucide.createIcons();
 
 const images = document.querySelectorAll(".stack-img");
