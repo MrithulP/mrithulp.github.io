@@ -1,0 +1,273 @@
+:root {
+  --bg: #080a0e;
+  --text: #f1f1f1;
+  --muted: #9aa0a6;
+  --nav-bg: rgba(8, 10, 14, 0.95);
+  --nav-bg-scroll: rgba(8, 10, 14, 0.55);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.light {
+  --bg: #f6f7f9;
+  --text: #111;
+  --muted: #666;
+  --nav-bg: rgba(255,255,255,0.9);
+  --nav-bg-scroll: rgba(255,255,255,0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.01em;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s ease;
+}
+
+.nav.scrolled {
+  background: var(--nav-bg-scroll);
+  backdrop-filter: blur(14px);
+}
+
+.nav-inner {
+  max-width: 780px;
+  margin: auto;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-left a {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-left a:hover {
+  color: var(--text);
+}
+
+.nav-right {
+  display: flex;
+}
+
+.icon {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon.sun {
+  color: #ffb347;
+}
+
+.icon.moon {
+  color: #8b7cff;
+}
+
+.icon:hover {
+  color: var(--text);
+}
+
+.section {
+  min-height: 100vh;
+  padding: 120px 20px;
+  max-width: 780px;
+  margin: auto;
+}
+
+.section h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.home {
+  padding: 40px 20px 120px;
+  max-width: 780px;
+  margin: auto;
+}
+
+.home-text h1 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.home-text h1 {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.home-sub {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+
+.home-desc {
+  font-size: 16px;
+  margin-bottom: 28px;
+  color: var(--muted);
+}
+
+.home-actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.btn:hover {
+  border-color: var(--text);
+}
+
+.icon-link {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  color: var(--text);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.icon-link svg,
+.btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.home-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-stack {
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+
+.stack-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  opacity: 0.55;
+  transition: transform 1.2s cubic-bezier(.22,1,.36,1), opacity 1s ease;
+  box-shadow: 0 14px 50px rgba(0,0,0,0.45);
+}
+
+.stack-img:nth-child(1) { transform: rotate(-17deg) translate(-14px, 10px) scale(0.96); }
+.stack-img:nth-child(2) { transform: rotate(9deg) translate(12px, -8px) scale(0.97); }
+.stack-img:nth-child(3) { transform: rotate(-7deg) translate(-10px, -12px) scale(0.95); }
+.stack-img:nth-child(4) { transform: rotate(12deg) translate(8px, 14px) scale(0.96); }
+.stack-img:nth-child(5) { transform: rotate(-14deg) translate(-6px, 6px) scale(0.97); }
+
+.stack-img.active {
+  opacity: 1;
+  transform: rotate(0deg) translate(0, 0) scale(1.05);
+  z-index: 20;
+}
+
+
+#typeText::after {
+  content: "|";
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 26px 18px;
+  }
+
+  .nav-left {
+    gap: 18px;
+  }
+
+  .section {
+    padding: 100px 18px;
+  }
+
+  .home {
+    padding: 30px 18px 100px;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .home-text h1 {
+    font-size: 36px;
+  }
+
+  .home-photo img {
+    width: 220px;
+  }
+}
