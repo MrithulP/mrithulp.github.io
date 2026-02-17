@@ -97,3 +97,31 @@ function type() {
 }
 
 type();
+
+const tabs = document.querySelectorAll(".exp-tab");
+const panels = document.querySelectorAll(".exp-panel");
+const indicator = document.querySelector(".exp-indicator");
+
+const activeIndex = [...tabs].findIndex(tab =>
+  tab.classList.contains("active")
+);
+indicator.style.transform = `translateX(${activeIndex * 100}%)`;
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+
+    tabs.forEach(t => t.classList.remove("active"));
+    panels.forEach(p => p.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab).classList.add("active");
+
+    indicator.style.transform = `translateX(${index * 100}%)`;
+
+  });
+});
+
+
+
+
+
