@@ -3,106 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mrithul - Resume</title>
-  
-  <!-- Fonts -->
+  <title>Mrithul — Portfolio</title>
+  <meta name="description" content="Mrithul — Data Science student building practical software, web tools, and systems that solve real problems.">
+
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-
-
-  <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVIGATION / HEADER
-       ========================= -->
+  <!-- NAVIGATION -->
   <header class="nav">
     <div class="nav-inner">
 
-      <!-- Navigation links -->
+      <a href="#" class="nav-brand">Mrithul</a>
+
+      <!-- Desktop nav links -->
       <nav class="nav-left">
-        <a href="#home">home</a>
-        <a href="#projects">projects</a>
-        <a href="#blog">blog</a>
-        <a href="#contact">contact</a>
+        <a href="#" class="nav-link" data-section="home">home</a>
+        <a href="#experience" class="nav-link" data-section="experience">experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">projects</a>
+        <a href="#about" class="nav-link" data-section="about">about</a>
+        <a href="#contact" class="nav-link" data-section="contact">contact</a>
       </nav>
 
-      <!-- Theme toggle button -->
       <div class="nav-right">
-        <button id="themeToggle" class="icon"></button>
+        <button id="themeToggle" aria-label="Toggle theme"></button>
+        <!-- Hamburger (Mobile)-->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
 
     </div>
   </header>
 
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav">
+      <a href="#" class="mobile-link" data-section="home">home</a>
+      <a href="#experience" class="mobile-link" data-section="experience">experience</a>
+      <a href="#projects" class="mobile-link" data-section="projects">projects</a>
+      <a href="#about" class="mobile-link" data-section="about">about</a>
+      <a href="#contact" class="mobile-link" data-section="contact">contact</a>
+    </nav>
+  </div>
+
   <main>
 
-    <!-- =========================
-         HOME SECTION
-         ========================= -->
+    <!-- HOME -->
     <section id="home" class="home">
-
       <div class="home-grid">
 
-        <!-- Home text content -->
         <div class="home-text">
           <h1 id="typeText"></h1>
 
-          <p class="home-sub">
+          <p class="home-sub animate-in" style="--delay: 0.1s">
             Data Science student building practical software, web tools, and systems that solve real problems.
           </p>
 
-          <p class="home-desc">
-            I work at the intersection of coding, design, and leadership — creating projects that are functional, minimal, and purpose-driven.          </p>
+          <p class="home-desc animate-in" style="--delay: 0.2s">
+            I work at the intersection of coding, design, and leadership — creating projects that are functional, minimal, and purpose-driven.
+          </p>
 
-          <!-- Home actions / buttons -->
-          <div class="home-actions">
-
-            <a href="#" class="btn">
+          <div class="home-actions animate-in" style="--delay: 0.3s">
+            <a href="./resume.pdf" download="Mrithul_Resume.pdf" class="btn">
               Resume
               <i data-lucide="download"></i>
             </a>
-
-            <a href="#" class="icon-link">
+            <a href="https://www.linkedin.com/in/mrithul-padinhattayil-b1251a3aa/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
               <i data-lucide="linkedin"></i>
             </a>
-
-            <a href="#" class="icon-link">
+            <a href="https://github.com/MrithulP" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
               <i data-lucide="github"></i>
             </a>
-
-            <a href="#" class="icon-link">
+            <a href="mailto:mridhull2008@gmail.com" class="icon-link" aria-label="Email">
               <i data-lucide="mail"></i>
             </a>
-
           </div>
         </div>
 
-        <!-- Home photo stack -->
-        <div class="home-photo">
+        <div class="home-photo animate-in" style="--delay: 0.15s">
           <div class="photo-stack">
-
-            <img src="./src/pic.jpg" class="stack-img active">
-            <img src="./src/pic1.jpeg" class="stack-img">
-            <img src="./src/pic2.jpeg" class="stack-img">
-            <img src="./src/pic.jpg" class="stack-img">
-            <img src="./src/pic4.jpeg" class="stack-img">
-
+            <img src="./src/pic.jpg"   class="stack-img" alt="Mrithul">
+            <img src="./src/pic1.jpeg" class="stack-img" alt="Mrithul">
+            <img src="./src/pic2.jpeg" class="stack-img" alt="Mrithul">
+            <img src="./src/pic.jpg"   class="stack-img" alt="Mrithul">
+            <img src="./src/pic4.jpeg" class="stack-img" alt="Mrithul">
           </div>
         </div>
 
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience" class="experience">
-
       <div class="exp-container">
 
         <div class="exp-tabs">
@@ -113,84 +112,65 @@
 
         <div class="exp-content">
 
-          <!-- WORK -->
           <div class="exp-panel" id="work">
             <div class="exp-box">
               <div class="timeline">
-
                 <div class="timeline-item">
                   <div class="timeline-logo">
-                    <img src="./src/fil.jpeg" alt="">
+                    <img src="./src/fil.jpeg" alt="Furniture International Ltd">
                   </div>
-
                   <div class="timeline-body">
-                  <div class="timeline-header">
-                    <h3>Furniture International Ltd - Kenya</h3>
-                    <span>Summer 2023 & 2024</span>
-
+                    <div class="timeline-header">
+                      <h3>Furniture International Ltd — Kenya</h3>
+                      <span>Summer 2023 &amp; 2024</span>
+                    </div>
+                    <p>Intern · Seasonal, during A-Level studies</p>
+                    <ul>
+                      <li>Conducted physical inspection of finished furniture products</li>
+                      <li>Performed quality assurance checks to ensure manufacturing standards</li>
+                      <li>Maintained production and inventory records through structured data entry</li>
+                      <li>Assisted in reporting and documentation for operational processes</li>
+                    </ul>
                   </div>
-
-                  <p>Intern (Seasonal, during A-Level studies)</p>
-
-                  <ul>
-                    <li>Conducted physical inspection of finished furniture products</li>
-                    <li>Performed quality assurance checks to ensure manufacturing standards</li>
-                    <li>Maintained production and inventory records through structured data entry</li>
-                    <li>Assisted in reporting and documentation for operational processes</li>
-                  </ul>
                 </div>
-
-                </div>
-
               </div>
             </div>
           </div>
 
-          <!-- EDUCATION -->
           <div class="exp-panel active" id="education">
             <div class="exp-box">
               <div class="timeline">
 
                 <div class="timeline-item">
                   <div class="timeline-logo">
-                    <img src="./src/CU.png" alt="">
+                    <img src="./src/CU.png" alt="Chandigarh University">
                   </div>
-
                   <div class="timeline-body">
                     <div class="timeline-header">
-                      <h3>Chandigarh University - India</h3>
-                      <span>2025 - present</span>
+                      <h3>Chandigarh University — India</h3>
+                      <span>2025 – present</span>
                     </div>
-
-                    <p>BCA Data Science</p>
-
-                    <ul>
-
-                    </ul>
+                    <p>BCA · Data Science</p>
                   </div>
                 </div>
 
                 <div class="timeline-item">
                   <div class="timeline-logo">
-                    <img src="./src/oansh.png" alt="">
+                    <img src="./src/oansh.png" alt="Oshwal Academy Nairobi Senior High">
                   </div>
-
                   <div class="timeline-body">
                     <div class="timeline-header">
-                      <h3>Oshwal Academy Nairobi Senior High - Kenya</h3>
-                      <span>2023 - 2025</span>
+                      <h3>Oshwal Academy Nairobi Senior High — Kenya</h3>
+                      <span>2023 – 2025</span>
                     </div>
-
-                    <p>Cambridge & Pearson Edexcel International A-Level</p>
-
+                    <p>Cambridge &amp; Pearson Edexcel International A-Level</p>
                     <ul>
-                      <li>Chairman - Media Hub (Web Development & Digital Media)</li>
-                      <li>Chairman - Careers Committee</li>
+                      <li>Chairman — Media Hub (Web Development &amp; Digital Media)</li>
+                      <li>Chairman — Careers Committee</li>
                       <li>Built multiple internal web tools for school use</li>
                       <li>Developed digital systems for clubs and student services</li>
                       <li>Led school-wide tech and media initiatives</li>
                     </ul>
-
                   </div>
                 </div>
 
@@ -199,45 +179,337 @@
           </div>
 
         </div>
-
       </div>
-
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section">
+      <div class="projects-container">
 
-    <!-- =========================
-         EMPTY IFRAME (placeholder)
-         ========================= -->
-    <iframe src="" frameborder="0"></iframe>
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-sub">Things I've built and shipped.</p>
+        </div>
 
-    <!-- =========================
-         PROJECTS SECTION
-         ========================= -->
-    <section id="projects" class="section">
-      <h1>Projects</h1>
+        <div class="projects-grid">
+
+          <!-- Card 1 -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-title">School Portal</h3>
+                <div class="project-links">
+                  <a href="#" class="project-icon-link" aria-label="GitHub">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                  <a href="#" class="project-icon-link" aria-label="Live site">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">An internal web portal built for school clubs and student services — handling sign-ups, announcements, and resource sharing in one place.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-title">Data Dashboard</h3>
+                <div class="project-links">
+                  <a href="#" class="project-icon-link" aria-label="GitHub">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                  <a href="#" class="project-icon-link" aria-label="Live site">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">A visual dashboard for analysing structured datasets — built to explore trends, filter records, and export summaries cleanly.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">SQL</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card">
+            <div class="project-preview">
+              <div class="preview-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-title">Media Hub Site</h3>
+                <div class="project-links">
+                  <a href="#" class="project-icon-link" aria-label="GitHub">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                  <a href="#" class="project-icon-link" aria-label="Live site">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">The public-facing website for OANSH Media Hub — showcasing digital work, club updates, and creative projects produced by students.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">UI Design</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 — View more -->
+          <a href="#" target="_blank" rel="noopener noreferrer" class="project-card project-card--more">
+            <div class="more-card-inner">
+              <div class="more-arrow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </div>
+              <p class="more-card-label">View all projects</p>
+              <p class="more-card-sub">See the full project portfolio →</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
     </section>
 
-    <!-- =========================
-         BLOG SECTION
-         ========================= -->
-    <section id="blog" class="section">
-      <h1>Blog</h1>
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+
+        <div class="section-header">
+          <h2 class="section-title">About</h2>
+          <p class="section-sub">The person behind the projects.</p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Bio -->
+          <div class="about-bio">
+            <p>I'm Mrithul — born in India, but I've spent most of my life elsewhere. Nine years in the UAE, five back in India, then three in Nairobi, Kenya, before returning to India for university. Moving between countries teaches you things no classroom can: how to read a room quickly, find common ground with people from completely different backgrounds, and get comfortable being the new person. I'm not naturally the loudest in a room — I take a little time to settle in — but once I do, I work well with people and tend to step up.</p>
+            <p>That played out pretty literally in Kenya. I started senior high, got involved in clubs and committees, and somewhere along the way became the unofficial tech guy — building tools with the team to make things more paperless and efficient around the school. By the second half of Year 12 I was deep in it, and by Year 13 I was chairing the Media Hub and Careers Committee. We kept pushing to do more with the school's systems, to the point where I'm fairly sure we drove the IT admin up the wall. But things got built, and people used them.</p>
+            <p>My interest in tech goes back to 8th grade — a school subject on AI was enough to make me think computers were genuinely cool. It stayed a hobby for years though, something fun on the side rather than a direction. I didn't see it as a career yet, which is how I ended up picking a subject combination at A-Levels that had nothing to do with it. Not a bad combo, just not the right one for where my head actually was.</p>
+            <p>Then Year 13 happened — the projects, the team, the building — and the spark came back properly. I knew I wanted to work in tech, specifically in AI and data science. BCA made sense as the path in without the maths and physics background I didn't have. The degree isn't the point; the direction is. Web development is a tool I'll always use, but building systems that learn, analyse, and solve real problems is what I'm here for.</p>
+          </div>
+
+          <!-- Cards row -->
+          <div class="about-cards-row">
+
+            <!-- Currently -->
+            <div class="about-card">
+              <p class="about-card-title">Currently</p>
+              <ul class="about-list">
+                <li><span class="about-emoji">📚</span><span>Studying BCA Data Science at Chandigarh University</span></li>
+                <li><span class="about-emoji">🔨</span><span>Building web tools and personal projects</span></li>
+                <li><span class="about-emoji">🌱</span><span>Learning Python for data analysis & ML</span></li>
+                <li><span class="about-emoji">👀</span><span>Open to internships and collaborations</span></li>
+              </ul>
+            </div>
+
+            <!-- Certificates -->
+            <div class="about-card">
+              <p class="about-card-title">Certificates & achievements</p>
+              <ul class="about-certs" id="certList">
+
+                <!-- Always visible -->
+                <li class="cert-item">
+                  <div class="cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="cert-name">Cambridge International A-Level</p>
+                    <p class="cert-issuer">Cambridge Assessment International Education · 2025</p>
+                  </div>
+                </li>
+                <li class="cert-item">
+                  <div class="cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="cert-name">Pearson Edexcel International A-Level</p>
+                    <p class="cert-issuer">Pearson Edexcel · 2025</p>
+                  </div>
+                </li>
+                <li class="cert-item">
+                  <div class="cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="cert-name">Placeholder Certificate</p>
+                    <p class="cert-issuer">Issuer · Year</p>
+                  </div>
+                </li>
+
+                <!-- Hidden until "show more" -->
+                <li class="cert-item cert-hidden">
+                  <div class="cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="cert-name">Placeholder Certificate</p>
+                    <p class="cert-issuer">Issuer · Year</p>
+                  </div>
+                </li>
+                <li class="cert-item cert-hidden">
+                  <div class="cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="cert-name">Placeholder Certificate</p>
+                    <p class="cert-issuer">Issuer · Year</p>
+                  </div>
+                </li>
+                <li class="cert-item cert-hidden">
+                  <div class="cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="cert-name">Placeholder Certificate</p>
+                    <p class="cert-issuer">Issuer · Year</p>
+                  </div>
+                </li>
+                <li class="cert-item cert-hidden">
+                  <div class="cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="cert-name">Placeholder Certificate</p>
+                    <p class="cert-issuer">Issuer · Year</p>
+                  </div>
+                </li>
+                <li class="cert-item cert-hidden">
+                  <div class="cert-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div>
+                    <p class="cert-name">Placeholder Certificate</p>
+                    <p class="cert-issuer">Issuer · Year</p>
+                  </div>
+                </li>
+
+              </ul>
+
+              <button class="cert-toggle" id="certToggle">
+                <span id="certToggleText">Show 5 more</span>
+                <svg id="certToggleIcon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- =========================
-         CONTACT SECTION
-         ========================= -->
-    <section id="contact" class="section">
-      <h1>Contact</h1>
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+
+        <div class="section-header">
+          <h2 class="section-title">Get in touch</h2>
+          <p class="section-sub">I'm open to internships, collaborations, or just a good conversation.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Left — form -->
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" placeholder="Your name" autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" placeholder="your@email.com" autocomplete="off">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" placeholder="What's this about?" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" rows="5" placeholder="Tell me what's on your mind..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Send message
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <p class="form-notice" id="formNotice"></p>
+          </form>
+
+          <!-- Right — details -->
+          <div class="contact-details">
+
+            <div class="contact-info-block">
+              <p class="contact-info-label">Email</p>
+              <a href="mailto:mridhull2008@gmail.com" class="contact-info-value">mridhull2008@gmail.com</a>
+            </div>
+
+            <div class="contact-divider"></div>
+
+            <p class="contact-links-label">Find me on</p>
+            <div class="contact-links">
+              <a href="https://github.com/MrithulP" target="_blank" rel="noopener" class="contact-link-card">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <div>
+                  <p class="contact-link-name">GitHub</p>
+                  <p class="contact-link-handle">@MrithulP</p>
+                </div>
+                <svg class="contact-link-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/mrithul-padinhattayil-b1251a3aa/" target="_blank" rel="noopener" class="contact-link-card">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <div>
+                  <p class="contact-link-name">LinkedIn</p>
+                  <p class="contact-link-handle">Mrithul</p>
+                </div>
+                <svg class="contact-link-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- =========================
-       SCRIPTS
-       ========================= -->
-  <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Mrithul</span>
+        <span class="footer-copy">© <span id="footer-year"></span>. All rights reserved.</span>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:mridhull2008@gmail.com" class="footer-link">Email</a>
+        <a href="https://github.com/MrithulP" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/mrithul-padinhattayil-b1251a3aa/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
-
