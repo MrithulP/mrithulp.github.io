@@ -62,18 +62,20 @@ hamburger.addEventListener("click", () => {
   } else {
     hamburger.classList.add("open");
     mobileMenu.classList.add("open");
-    document.body.style.overflow = "hidden"; // prevent scroll behind menu
+    document.body.style.overflow = "hidden";
   }
 });
 
-// Close on link click
 mobileLinks.forEach(link => {
   link.addEventListener("click", closeMobileMenu);
 });
 
-// Close on Escape key
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeMobileMenu();
+  if (e.key === "Escape") {
+    // Don't close mobile menu if success popup is open
+    if (formSuccessPopup && formSuccessPopup.classList.contains("visible")) return;
+    closeMobileMenu();
+  }
 });
 
 
@@ -226,41 +228,72 @@ revealItems.forEach((el, i) => {
 // CONTACT FORM
 // =========================
 const contactForm = document.getElementById("contactForm");
-const formNotice = document.getElementById("formNotice");
+const formNotice  = document.getElementById("formNotice");
+const formSuccessPopup  = document.getElementById("formSuccessPopup");
+const formSuccessClose  = document.getElementById("formSuccessClose");
 
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const name    = document.getElementById("contactName").value.trim();
-    const email   = document.getElementById("contactEmail").value.trim();
-    const subject = document.getElementById("contactSubject").value.trim();
-    const message = document.getElementById("contactMessage").value.trim();
+    // Input IDs in the HTML are Name, Email, Subject, Message
+    const name    = document.getElementById("Name").value.trim();
+    const email   = document.getElementById("Email").value.trim();
+    const subject = document.getElementById("Subject").value.trim();
+    const message = document.getElementById("Message").value.trim();
 
     if (!name || !email || !message) {
-      formNotice.textContent = "Please fill in all required fields.";
+      formNotice.textContent = "Please fill in name, email and message.";
       formNotice.className = "form-notice error";
       return;
     }
 
-    // Opens default mail client with pre-filled fields
-    const mailto = `mailto:mrithulpadinhattayil@gmail.com?subject=${encodeURIComponent(subject || "Portfolio enquiry")}&body=${encodeURIComponent(`Hi Mrithul,
+    formNotice.textContent = "";
+    formNotice.className = "form-notice";
 
-${message}
+    // Submit via fetch to Google Forms (no-cors — data goes through, response unreadable)
+    const formData = new FormData();
+    formData.append("entry.1353368278",  name);
+    formData.append("entry.1060021900", email);
+    formData.append("entry.132507211", subject);
+    formData.append("entry.44879822", message);
 
-— ${name} (${email})`)}`;
-    window.location.href = mailto;
-
-    formNotice.textContent = "Opening your mail client...";
-    formNotice.className = "form-notice success";
-
-    setTimeout(() => {
+    fetch(contactForm.action, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    })
+    .finally(() => {
+      // .finally() runs whether it succeeds or fails
+      // with no-cors we can never read the response so this is the right approach
       contactForm.reset();
-      formNotice.textContent = "";
-      formNotice.className = "form-notice";
-    }, 3000);
+      showSuccessPopup();
+    });
   });
 }
+
+function showSuccessPopup() {
+  if (!formSuccessPopup) return;
+  formSuccessPopup.classList.add("visible");
+  document.body.style.overflow = "hidden";
+}
+
+function hideSuccessPopup() {
+  if (!formSuccessPopup) return;
+  formSuccessPopup.classList.remove("visible");
+  document.body.style.overflow = "";
+}
+
+if (formSuccessClose) {
+  formSuccessClose.addEventListener("click", hideSuccessPopup);
+}
+
+if (formSuccessPopup) {
+  formSuccessPopup.addEventListener("click", (e) => {
+    if (e.target === formSuccessPopup) hideSuccessPopup();
+  });
+}
+
 
 // =========================
 // CERT SHOW MORE TOGGLE
