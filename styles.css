@@ -1690,3 +1690,101 @@ body.light .contact-divider {
     padding: 14px 16px;
   }
 }
+
+/* ===========================
+   FORM SUCCESS POPUP
+   =========================== */
+.form-success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.form-success-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.form-success-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 40px 36px;
+  max-width: 380px;
+  width: calc(100% - 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(.22, 1, .36, 1);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.form-success-overlay.visible .form-success-card {
+  transform: translateY(0) scale(1);
+}
+
+.form-success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.form-success-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.form-success-sub {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.form-success-btn {
+  margin-top: 8px;
+  padding: 10px 28px;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.form-success-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+body.light .form-success-card {
+  background: #ffffff;
+  border-color: rgba(100, 80, 50, 0.12);
+  box-shadow: 0 24px 60px rgba(100, 80, 50, 0.12);
+}
+
+body.light .form-success-icon {
+  border-color: rgba(100, 80, 50, 0.2);
+}
