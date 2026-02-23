@@ -430,24 +430,24 @@
         <div class="contact-grid">
 
           <!-- Left — form -->
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScu1VfzYgsxUNvsK89E-iy0_gA4ZvF1WZtpJF2Df03K50JfPg/formResponse" method="post">
             <div class="form-row">
               <div class="form-group">
                 <label for="contactName">Name</label>
-                <input type="text" id="contactName" placeholder="Your name" autocomplete="off">
+                <input type="text" id="Name" placeholder="Your name" autocomplete="off" name="entry.1353368278">
               </div>
               <div class="form-group">
                 <label for="contactEmail">Email</label>
-                <input type="email" id="contactEmail" placeholder="your@email.com" autocomplete="off">
+                <input type="email" id="Email" placeholder="your@email.com" autocomplete="off" name="entry.1060021900">
               </div>
             </div>
             <div class="form-group">
               <label for="contactSubject">Subject</label>
-              <input type="text" id="contactSubject" placeholder="What's this about?" autocomplete="off">
+              <input type="text" id="Subject" placeholder="What's this about?" autocomplete="off" name="entry.132507211">
             </div>
             <div class="form-group">
               <label for="contactMessage">Message</label>
-              <textarea id="contactMessage" rows="5" placeholder="Tell me what's on your mind..."></textarea>
+              <textarea id="Message" name="entry.44879822" rows="5" placeholder="Tell me what's on your mind..."></textarea>
             </div>
             <button type="submit" class="form-submit">
               Send message
@@ -493,6 +493,18 @@
 
   </main>
 
+  <!-- SUCCESS POPUP -->
+  <div class="form-success-overlay" id="formSuccessPopup">
+    <div class="form-success-card">
+      <div class="form-success-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 class="form-success-title">Message sent!</h3>
+      <p class="form-success-sub">Thanks for reaching out — I'll get back to you as soon as I can.</p>
+      <button class="form-success-btn" id="formSuccessClose">Done</button>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
@@ -503,7 +515,7 @@
       <div class="footer-right">
         <a href="mailto:mridhull2008@gmail.com" class="footer-link">Email</a>
         <a href="https://github.com/MrithulP" target="_blank" rel="noopener" class="footer-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/mrithul-padinhattayil-b1251a3aa/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+       <a href="https://www.linkedin.com/in/mrithul-padinhattayil-b1251a3aa/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
       </div>
     </div>
   </footer>
