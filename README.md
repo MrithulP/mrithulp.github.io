@@ -58,7 +58,7 @@ Perfect for:
 
 ## 👨‍💻 Author
 
-**Mrithul Padinhattayil**
+**Mrithul Padinhattayil**<br>
 🔗 [MrithulP](https://github.com/MrithulP)
 
 ---
