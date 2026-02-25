@@ -30,8 +30,9 @@ A modern and responsive **personal portfolio website** built using **HTML, CSS, 
 ├── index.html
 ├── styles.css
 ├── script.js
-├── email.js
-├── resume.pdf
+├── resume.pdf 
+
+├── email.js (Google sheets -> Extensions -> AppScripts)
 ```
 
 ---
