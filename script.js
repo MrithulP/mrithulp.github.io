@@ -91,7 +91,7 @@ window.addEventListener("scroll", () => {
   updateActiveNav();
 });
 
-// Map section IDs to their elements
+
 const sections = [
   { id: "home",       el: document.getElementById("home") },
   { id: "experience", el: document.getElementById("experience") },
@@ -104,7 +104,7 @@ function updateActiveNav() {
   const scrollY = window.scrollY;
   const navHeight = nav.offsetHeight;
 
-  // Find which section we're currently in
+  
   let current = "home";
 
   for (const { id, el } of sections) {
@@ -126,7 +126,7 @@ function updateActiveNav() {
   });
 }
 
-// Run once on load
+
 updateActiveNav();
 
 
@@ -162,10 +162,10 @@ function type() {
     const delay = text.charAt(charIndex - 1) === "," ? 280 : 80 + Math.random() * 40;
     setTimeout(type, delay);
   } else {
-    // Append emoji then remove cursor
+    
     setTimeout(() => {
       typeEl.textContent += emoji;
-      typeEl.classList.add("done"); // #5 — hides the blinking cursor
+      typeEl.classList.add("done"); 
     }, 200);
   }
 }
@@ -264,8 +264,6 @@ if (contactForm) {
       body: formData,
     })
     .finally(() => {
-      // .finally() runs whether it succeeds or fails
-      // with no-cors we can never read the response so this is the right approach
       contactForm.reset();
       showSuccessPopup();
     });
@@ -296,7 +294,7 @@ if (formSuccessPopup) {
 
 
 // =========================
-// CERT SHOW MORE TOGGLE
+// CERTIFICATIONS - SHOW MORE TOGGLE
 // =========================
 const certToggle = document.getElementById("certToggle");
 const certToggleText = document.getElementById("certToggleText");
