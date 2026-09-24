@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mrithul — Projects</title>
+  <meta name="description" content="All projects by Mrithul — web tools, data projects, and more.">
+  <link rel="icon" type="image/png" href="../src/branding/mrithul-logo.png">
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mrithul — Projects">
+  <meta property="og:description" content="All projects by Mrithul — web tools, data projects, and more.">
+  <meta property="og:url" content="https://mrithulp.github.io/projects/">
+  <meta property="og:image" content="https://mrithulp.github.io/src/branding/mrithul-logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mrithul — Projects">
+  <meta name="twitter:description" content="All projects by Mrithul — web tools, data projects, and more.">
+  <meta name="twitter:image" content="https://mrithulp.github.io/src/branding/mrithul-logo.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Back to portfolio
+      </a>
+      <div class="nav-right">
+        <button id="themeToggle" aria-label="Toggle theme"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-container">
+
+      <!-- Header -->
+      <div class="page-header">
+        <h1 class="page-title">Projects</h1>
+        <p class="page-sub">Everything I've built — tools, experiments, and real-world systems.</p>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <div class="search-wrap">
+          <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search projects...">
+        </div>
+        <div class="sort-wrap">
+          <select id="sortSelect" class="sort-select">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+          </select>
+          <svg class="sort-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+
+      <!-- Count -->
+      <p class="results-count" id="resultsCount"></p>
+
+      <!-- Grid -->
+      <div class="projects-grid" id="projectsGrid"></div>
+
+      <!-- Empty state -->
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <p>No projects match "<span id="emptyQuery"></span>"</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Mrithul</span>
+        <span class="footer-copy">© <span id="footer-year"></span>. All rights reserved.</span>
+      </div>
+      <a href="https://mrithulp.github.io/" class="footer-link">← Back to portfolio</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
